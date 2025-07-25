@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Portfólio - Matheus de Sousa</title>
+</head>
+
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio" class="menu-link">Inicío</a>
+            </li>
+            <li>
+                <a href="#sobre" class="menu-link">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos" class="menu-link">Projetos</a>
+            </li>
+            <li>
+                <a href="#contatos" class="menu-link">Contato</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="./img/matheus.jpeg" alt="Foto de Matheus de Sousa" class="foto-perfil">
+        <h1>Matheus de Sousa</h1>
+        <p class="paragrafo-cabecalho">Desenvolvedor Front-end</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-conteudo">
+            <p class="sobre-paragrafo">Olá! Sou Matheus, um desenvolvedor front-end apaixonado por criar experiências
+                web incríveis. Tenho
+                experiência em HTML, CSS e JavaScript, e estou sempre aprendendo novas tecnologias para aprimorar minhas
+                habilidades.</p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projeto-card">
+                <img src="./img/previsao.png" alt="Projeto de Previsão do Tempo" class="projeto-imagem">
+                <div class="caixa-textos">
+                    <h3 class="info-projetos">Previsão do Tempo</h3>
+                    <p class="paragrafo-projetos">Site de previsão do tempo com dados atualizados em tempo real, alertas
+                        meteorológicos e tendências para os próximos dias..</p>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <img src="./img/conversor.png" alt="Projeto de Conversor de Moedas" class="projeto-imagem">
+                <div class="caixa-textos">
+                    <h3 class="info-projetos">Conversor de Moedas</h3>
+                    <p class="paragrafo-projetos">Conversor de moedas simples e rápido, com taxas de câmbio atualizadas
+                        em
+                        tempo real.</p>
+                </div>
+            </div>
+
+            <div class="projeto-card">
+                <img src="./img/spotify.png" alt="Projeto Spotify" class="projeto-imagem">
+                <div class="caixa-textos">
+                    <h3 class="info-projetos">Página Spotify</h3>
+                    <p class="paragrafo-projetos">SPágina clássica do Spotify com visual retrô, cores claras, layout
+                        simples
+                        e foco em playlists, descoberta musical e controle fácil da reprodução.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato" id="contatos">
+        <h2 class="contatos-titulo">Entre em Contato</h2>
+        <form class="contatos-formulario" id="formulario" onsubmit="enviarWhats(event)">
+            <div class="grupo-form">
+                <input type="text" placeholder="Nome" class="campo-form" id="nome">
+            </div>
+            <div class="grupo-form">
+                <textarea placeholder="Digite sua Mensagem" class="campo-form" id="mensagem" rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="botao-form">Enviar WhatsApp</button>
+        </form>
+    </section>
+
+    <script>
+        function enviarWhats(event) {
+            event.preventDefault(); // Impede o envio do formulário padrão
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5561982477502'; // Substitua pelo seu número de telefone
+
+            const texto = `Olá, meu nome é ${nome.value}. ${mensagem.value}`;
+            const msgFormatada = encodeURIComponent(texto);
+
+            const url = `https://api.whatsapp.com/send?phone=${telefone}&text=${msgFormatada}`;
+
+            window.open(url, '_blank');
+        }
+
+    </script>
+
+</body>
+
+</html>
