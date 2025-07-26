@@ -119,7 +119,7 @@ h1 {
 }
 
 .sobre-paragrafo {
-    text-align: center;
+    text-align: justify;
     font-size: 1.2em;
 }
 
@@ -155,6 +155,11 @@ h1 {
     gap: 2em;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.projeto-link {
+    text-decoration: none;
+    color: var(--claro);
 }
 
 .projeto-imagem {
