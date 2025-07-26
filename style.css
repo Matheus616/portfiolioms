@@ -296,3 +296,38 @@ h1 {
     }
     
 }
+
+@media screen and (max-width: 768px) {
+
+    .menu {
+        flex-direction: row;
+        gap: 1em;
+        margin-right: auto;
+
+    }
+
+    .foto-perfil {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .paragrafo-cabecalho {
+        font-size: 1.2em;
+    }
+
+    .sobre-titulo,
+    .projetos-titulo,
+    .contatos-titulo {
+        font-size: 1.5em;
+    }
+
+    .projeto-card {
+        margin-bottom: 20px;
+    }
+    
+}
